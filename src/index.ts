@@ -1,7 +1,7 @@
-import express from "express";
+//import express from "express";
 import { PrismaClient } from "@prisma/client";
 
-const app = express();
+//const app = express();
 const client = new PrismaClient();
 
 
@@ -15,5 +15,12 @@ async function createUser() {
         }
     })
 }
+
+async function createTodo() {
+    await client.todo.create ({
+        
+    })
+}
+
 
 createUser();
